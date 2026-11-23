@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Materiales Compuestos · UFPS</title>
+<meta name="description" content="Material interactivo sobre materiales compuestos: estructura, propiedades y procesamiento. Materiales de Ingeniería, Ingeniería Industrial UFPS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topnav">
+  <a class="brand" href="#inicio"><span class="dot"></span>Compuestos · UFPS</a>
+  <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav>
+    <a href="#estructura">Estructura</a>
+    <a href="#propiedades">Propiedades</a>
+    <a href="#calculadora">Calculadora</a>
+    <a href="#procesamiento">Procesamiento</a>
+    <a href="#caso">Caso</a>
+    <a href="#quiz" class="nav-cta">Test</a>
+  </nav>
+</header>
+<div class="progress" aria-hidden="true"><div class="progress-bar"></div></div>
+
+<!-- ============ PORTADA ============ -->
+<section id="inicio" class="hero">
+  <div class="hero-text">
+    <p class="kicker">Universidad Francisco de Paula Santander · Ingeniería Industrial</p>
+    <h1>Materiales compuestos</h1>
+    <p class="lead">Estructura, propiedades y aspectos técnicos de su procesamiento.<br><em class="en">Composite materials: structure, properties and processing.</em></p>
+    <div class="team">
+      <div><strong>Jean Morales</strong><span>Código 1193641</span></div>
+      <div><strong>Jhostyn Blanco</strong><span>Código 1981490</span></div>
+    </div>
+    <p class="meta">Materiales de Ingeniería · San José de Cúcuta · Noviembre de 2026</p>
+    <div class="hero-actions">
+      <a class="btn" href="#estructura">Empezar</a>
+      <a class="btn ghost" href="#quiz">Ir al test</a>
+    </div>
+  </div>
+  <svg class="hero-art" viewBox="0 0 400 480" aria-label="Fibras con distintas orientaciones dentro de una matriz">
+    <rect width="400" height="480" rx="24" fill="#8E1411"/>
+    <g stroke="#F3D5D3" stroke-width="5" stroke-linecap="round" class="fib a">
+      <line x1="40" y1="60" x2="360" y2="60"/><line x1="40" y1="95" x2="360" y2="95"/><line x1="40" y1="130" x2="360" y2="130"/>
+    </g>
+    <g stroke="#FBF7F5" stroke-width="5" stroke-linecap="round" class="fib b">
+      <line x1="80" y1="180" x2="80" y2="300"/><line x1="130" y1="180" x2="130" y2="300"/><line x1="180" y1="180" x2="180" y2="300"/><line x1="230" y1="180" x2="230" y2="300"/><line x1="280" y1="180" x2="280" y2="300"/><line x1="330" y1="180" x2="330" y2="300"/>
+    </g>
+    <g stroke="#F3D5D3" stroke-width="5" stroke-linecap="round" class="fib c">
+      <line x1="50" y1="350" x2="160" y2="450"/><line x1="120" y1="340" x2="240" y2="450"/><line x1="200" y1="340" x2="320" y2="450"/><line x1="280" y1="340" x2="360" y2="410"/>
+    </g>
+  </svg>
+</section>
+
+<!-- ============ ESTRUCTURA ============ -->
+<section id="estructura" class="block">
+  <p class="kicker">01 · Estructura <em class="en">· Structure</em></p>
+  <h2>Dos fases distintas que trabajan como una sola</h2>
+  <p class="intro">Un material compuesto es un material multifase, fabricado artificialmente, cuyas fases son químicamente distintas, conservan su identidad y están separadas por una interfase. Por el <strong>principio de acción combinada</strong>, el resultado supera a cada fase por separado.</p>
+
+  <div class="equation">
+    <div class="eq-box">Matriz<small>Matrix · fase continua</small></div>
+    <span class="op">+</span>
+    <div class="eq-box">Refuerzo<small>Reinforcement · fase dispersa</small></div>
+    <span class="op">=</span>
+    <div class="eq-box accent">Compuesto<small>Composite · mejores propiedades</small></div>
+  </div>
+
+  <h3 class="sub">Toque cada componente para ver su función</h3>
+  <div class="flip-grid">
+    <button class="flip" aria-pressed="false">
+      <span class="front"><b>Matriz</b><em class="en">Matrix</em><span class="hint">Ver función ↻</span></span>
+      <span class="back">Da forma a la pieza, transfiere la carga a las fibras y las protege del ambiente y del desgaste. <i>Epoxi, poliéster, aluminio, cerámica.</i></span>
+    </button>
+    <button class="flip" aria-pressed="false">
+      <span class="front"><b>Refuerzo</b><em class="en">Reinforcement</em><span class="hint">Ver función ↻</span></span>
+      <span class="back">Fase más rígida y resistente: soporta la mayor parte de la carga. Partículas, fibras cortas, fibras continuas o tejidos. <i>Vidrio, carbono, aramida.</i></span>
+    </button>
+    <button class="flip" aria-pressed="false">
+      <span class="front"><b>Interfase</b><em class="en">Interface</em><span class="hint">Ver función ↻</span></span>
+      <span class="back">Zona de unión. Si la adhesión es débil, la carga no pasa y el material falla antes. Las fibras llevan un recubrimiento (<i>sizing</i>), como los silanos.</span>
+    </button>
+  </div>
+
+  <h3 class="sub">Clasificación según la matriz</h3>
+  <div class="tabs" role="tablist">
+    <button role="tab" class="tab active" data-tab="pmc" aria-selected="true">PMC · Polimérica</button>
+    <button role="tab" class="tab" data-tab="mmc" aria-selected="false">MMC · Metálica</button>
+    <button role="tab" class="tab" data-tab="cmc" aria-selected="false">CMC · Cerámica</button>
+  </div>
+  <div class="tab-panels">
+    <div class="tab-panel active" id="tab-pmc">
+      <dl><dt>Matriz</dt><dd>Epoxi, poliéster, vinilester, PEEK</dd><dt>Refuerzo</dt><dd>Fibra de vidrio, carbono, aramida</dd><dt>Usos</dt><dd>Aspas eólicas, carrocerías, cañas de pescar, tuberías</dd></dl>
+      <p>Los más comunes en la industria por su bajo peso y facilidad de fabricación.</p>
+    </div>
+    <div class="tab-panel" id="tab-mmc">
+      <dl><dt>Matriz</dt><dd>Aluminio, titanio, magnesio</dd><dt>Refuerzo</dt><dd>Partículas o fibras de SiC, Al₂O₃</dd><dt>Usos</dt><dd>Pistones, discos de freno, piezas aeroespaciales</dd></dl>
+      <p>Más resistentes al calor que los poliméricos y más tenaces que los cerámicos.</p>
+    </div>
+    <div class="tab-panel" id="tab-cmc">
+      <dl><dt>Matriz</dt><dd>Carburo de silicio, alúmina, carbono</dd><dt>Refuerzo</dt><dd>Fibras de SiC o carbono</dd><dt>Usos</dt><dd>Frenos carbono-carbono, toberas, turbinas</dd></dl>
+      <p>Soportan temperaturas muy altas; la fibra les quita la fragilidad típica del cerámico.</p>
+    </div>
+  </div>
+
+  <div class="chips">
+    <span class="chip-label">Según el refuerzo:</span>
+    <span class="chip">Partículas · <i>concreto, cermets</i></span>
+    <span class="chip">Fibras · <i>vidrio-epoxi</i></span>
+    <span class="chip">Estructurales · <i>laminados, paneles sándwich</i></span>
+  </div>
+
+  <h3 class="sub">La orientación de la fibra define el comportamiento</h3>
+  <div class="orient">
+    <div class="orient-options" role="radiogroup" aria-label="Orientación de la fibra">
+      <button class="opt active" data-o="ud">Unidireccional 0°</button>
+      <button class="opt" data-o="woven">Tejido 0°/90°</button>
+      <button class="opt" data-o="random">Aleatoria (mat)</button>
+      <button class="opt" data-o="lam">Laminado 0/±45/90</button>
+    </div>
+    <div class="orient-view">
+      <svg id="orient-svg" viewBox="0 0 300 180" aria-label="Esquema de la orientación seleccionada"></svg>
+      <div class="orient-info">
+        <h4 id="orient-title">Unidireccional</h4>
+        <p id="orient-text"></p>
+        <div class="meter"><span>Rigidez en 0°</span><div class="track"><div id="m-long" class="fill"></div></div></div>
+        <div class="meter"><span>Rigidez en 90°</span><div class="track"><div id="m-trans" class="fill"></div></div></div>
+        <p class="tag" id="orient-tag">Anisótropo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROPIEDADES ============ -->
+<section id="propiedades" class="block alt">
+  <p class="kicker">02 · Propiedades <em class="en">· Properties</em></p>
+  <h2>La fibra de carbono es casi 5 veces más rígida por kilo que el acero</h2>
+  <p class="intro"><strong>Rigidez específica</strong> (<em class="en">specific stiffness</em>) = módulo elástico ÷ densidad. Indica cuánta rigidez se obtiene por cada kilogramo de material.</p>
+  <div class="bars" id="bars" aria-label="Rigidez específica en GPa por g/cm³">
+    <div class="bar-row" data-v="128"><span class="bar-name">Fibra de carbono</span><div class="bar-track"><div class="bar"></div></div><span class="bar-val">128</span></div>
+    <div class="bar-row" data-v="91"><span class="bar-name">Aramida (Kevlar)</span><div class="bar-track"><div class="bar"></div></div><span class="bar-val">91</span></div>
+    <div class="bar-row" data-v="28"><span class="bar-name">Fibra de vidrio E</span><div class="bar-track"><div class="bar"></div></div><span class="bar-val">28</span></div>
+    <div class="bar-row ref" data-v="26"><span class="bar-name">Acero</span><div class="bar-track"><div class="bar"></div></div><span class="bar-val">26</span></div>
+    <div class="bar-row ref" data-v="26"><span class="bar-name">Aluminio</span><div class="bar-track"><div class="bar"></div></div><span class="bar-val">26</span></div>
+  </div>
+  <p class="source">Valores típicos en GPa·cm³/g (Callister y Rethwisch, 2018).</p>
+
+  <div class="two-col">
+    <div class="card good">
+      <h3>Ventajas <em class="en">· Advantages</em></h3>
+      <ul>
+        <li>Alta resistencia y rigidez por unidad de peso</li>
+        <li>Baja densidad: 1,5–2,0 g/cm³ (acero: 7,85)</li>
+        <li>No se corroen; resisten humedad y químicos</li>
+        <li>Buena resistencia a la fatiga</li>
+        <li>Dilatación térmica casi nula en carbono-epoxi</li>
+      </ul>
+    </div>
+    <div class="card bad">
+      <h3>Limitaciones <em class="en">· Drawbacks</em></h3>
+      <ul>
+        <li>Anisotropía: débiles en sentido transversal</li>
+        <li>Falla por delaminación entre capas</li>
+        <li>Costo alto de fibra de carbono y procesos</li>
+        <li>Pierden rigidez sobre la Tg de la resina</li>
+        <li>Difícil reparación y reciclaje</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULADORA ============ -->
+<section id="calculadora" class="block">
+  <p class="kicker">03 · Regla de las mezclas <em class="en">· Rule of mixtures</em></p>
+  <h2>Calcule las propiedades de su propio compuesto</h2>
+  <div class="formulas">
+    <div><span class="f">E<sub>cl</sub> = E<sub>m</sub>V<sub>m</sub> + E<sub>f</sub>V<sub>f</sub></span><small>Carga longitudinal · isodeformación · límite superior</small></div>
+    <div><span class="f">1/E<sub>ct</sub> = V<sub>m</sub>/E<sub>m</sub> + V<sub>f</sub>/E<sub>f</sub></span><small>Carga transversal · isoesfuerzo · límite inferior</small></div>
+    <div><span class="f">ρ<sub>c</sub> = ρ<sub>m</sub>V<sub>m</sub> + ρ<sub>f</sub>V<sub>f</sub></span><small>Densidad</small></div>
+  </div>
+
+  <div class="calc">
+    <div class="calc-inputs">
+      <label>Fibra (refuerzo)
+        <select id="c-fiber">
+          <option value="carbon">Carbono · E 230 GPa · ρ 1,8</option>
+          <option value="glass">Vidrio E · E 72 GPa · ρ 2,58</option>
+          <option value="aramid">Aramida · E 131 GPa · ρ 1,44</option>
+        </select>
+      </label>
+      <label>Matriz
+        <select id="c-matrix">
+          <option value="epoxy">Epoxi · E 3,4 GPa · ρ 1,2</option>
+          <option value="polyester">Poliéster · E 3,0 GPa · ρ 1,25</option>
+        </select>
+      </label>
+      <label>Fracción volumétrica de fibra V<sub>f</sub>: <output id="c-vf-out">0,60</output>
+        <input type="range" id="c-vf" min="0.1" max="0.7" step="0.05" value="0.6">
+      </label>
+      <p class="note">En la práctica V<sub>f</sub> va de 0,3 a 0,7. Pruebe con carbono-epoxi al 0,60: es el ejercicio resuelto de la exposición.</p>
+    </div>
+    <div class="calc-results">
+      <div class="res"><span class="num" id="r-ecl">–</span><span class="lbl">GPa · módulo longitudinal</span></div>
+      <div class="res muted"><span class="num" id="r-ect">–</span><span class="lbl">GPa · módulo transversal</span></div>
+      <div class="res"><span class="num" id="r-rho">–</span><span class="lbl">g/cm³ · densidad</span></div>
+      <div class="res"><span class="num" id="r-load">–</span><span class="lbl">de la carga la llevan las fibras</span></div>
+      <div class="res wide"><span class="num" id="r-vs">–</span><span class="lbl" id="r-vs-lbl">rigidez específica frente al acero (26,4)</span></div>
+    </div>
+  </div>
+  <details class="steps">
+    <summary>Ver el procedimiento paso a paso</summary>
+    <ol id="c-steps"></ol>
+  </details>
+</section>
+
+<!-- ============ PROCESAMIENTO ============ -->
+<section id="procesamiento" class="block alt">
+  <p class="kicker">04 · Procesamiento <em class="en">· Processing</em></p>
+  <h2>Todo proceso sigue cuatro etapas</h2>
+  <ol class="flow">
+    <li><span class="n">1</span><b>Impregnar</b><small>Mojar el refuerzo con la matriz</small><em class="en">Impregnation</em></li>
+    <li><span class="n">2</span><b>Dar forma</b><small>Colocar capas o enrollar</small><em class="en">Forming / lay-up</em></li>
+    <li><span class="n">3</span><b>Consolidar</b><small>Vacío y presión sacan el aire</small><em class="en">Consolidation</em></li>
+    <li><span class="n">4</span><b>Curar</b><small>Calor y tiempo: 120–180 °C en epoxi</small><em class="en">Curing</em></li>
+  </ol>
+
+  <h3 class="sub">Filtre los procesos por volumen de producción</h3>
+  <div class="filters" role="group" aria-label="Filtrar por volumen">
+    <button class="filter active" data-f="all">Todos</button>
+    <button class="filter" data-f="bajo">Bajo</button>
+    <button class="filter" data-f="medio">Medio</button>
+    <button class="filter" data-f="alto">Alto</button>
+  </div>
+  <div class="proc-grid">
+    <article class="proc" data-v="bajo"><h4>Moldeo manual</h4><em class="en">Hand lay-up</em><p>Molde abierto, resina aplicada con rodillo. Simple y barato.</p><div class="proc-tags"><span>Volumen bajo</span><span>Calidad media</span></div><p class="ex">Lanchas, tanques, piscinas</p></article>
+    <article class="proc" data-v="bajo"><h4>Autoclave</h4><em class="en">Prepreg + autoclave</em><p>Capas preimpregnadas, bolsa de vacío, calor y presión.</p><div class="proc-tags"><span>Volumen bajo</span><span>Calidad muy alta</span></div><p class="ex">Aviones, Fórmula 1</p></article>
+    <article class="proc" data-v="medio"><h4>Infusión / RTM</h4><em class="en">Resin transfer molding</em><p>Molde cerrado; la resina se inyecta o se succiona por vacío.</p><div class="proc-tags"><span>Volumen medio</span><span>Calidad alta</span></div><p class="ex">Aspas eólicas, paneles</p></article>
+    <article class="proc" data-v="medio"><h4>Bobinado de filamentos</h4><em class="en">Filament winding</em><p>La fibra impregnada se enrolla sobre un mandril giratorio.</p><div class="proc-tags"><span>Volumen medio-alto</span><span>Calidad alta</span></div><p class="ex">Tuberías, tanques a presión, cilindros de GNV</p></article>
+    <article class="proc" data-v="alto"><h4>Pultrusión</h4><em class="en">Pultrusion</em><p>La fibra se jala a través de un dado caliente: perfil continuo.</p><div class="proc-tags"><span>Volumen alto</span><span>Calidad alta</span></div><p class="ex">Perfiles, varillas, escaleras</p></article>
+    <article class="proc" data-v="alto"><h4>Compresión SMC</h4><em class="en">Sheet molding compound</em><p>Lámina premezclada prensada en un molde caliente.</p><div class="proc-tags"><span>Volumen alto</span><span>Calidad media</span></div><p class="ex">Paneles de carro, carcasas</p></article>
+  </div>
+  <p class="source">MMC: fundición con agitación, infiltración, pulvimetalurgia · CMC: infiltración en fase vapor (CVI), pirólisis de polímeros (PIP).</p>
+
+  <div class="callout">
+    <h3>Variables críticas de control</h3>
+    <div class="vars">
+      <div><b>Porosidad</b><span>El aire atrapado baja la resistencia</span></div>
+      <div><b>Fracción y orientación</b><span>Deben coincidir con el diseño</span></div>
+      <div><b>Adhesión en la interfase</b><span>Si falla: delaminación</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASO ============ -->
+<section id="caso" class="block">
+  <p class="kicker">05 · Caso aplicado <em class="en">· Case study</em></p>
+  <h2>Cambiar tubería de acero por PRFV elimina la corrosión</h2>
+  <p class="intro">Una planta de tratamiento de agua en Cúcuta detiene la producción cada vez que su tubería de acero al carbono se corroe. Compare las dos opciones:</p>
+  <div class="compare">
+    <table>
+      <thead><tr><th>Criterio</th><th>Acero al carbono</th><th>PRFV (fibra de vidrio)</th></tr></thead>
+      <tbody>
+        <tr><td>Corrosión</td><td class="neg">Se corroe con agua tratada</td><td class="pos">No se corroe</td></tr>
+        <tr><td>Peso</td><td class="neg">Referencia (alto)</td><td class="pos">≈ ¼ del acero</td></tr>
+        <tr><td>Instalación</td><td class="neg">Requiere equipo pesado</td><td class="pos">Más rápida y sencilla</td></tr>
+        <tr><td>Impacto y temperatura</td><td class="pos">Alta resistencia</td><td class="neg">Menor: verificar en el diseño</td></tr>
+        <tr><td>Proceso de fabricación</td><td>Laminado y soldadura</td><td>Bobinado de filamentos</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="lesson">Lección para el ingeniero industrial: el material se elige por su <strong>costo total en el ciclo de vida</strong>, no solo por su precio de compra.</p>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section id="quiz" class="block quiz-section">
+  <p class="kicker">06 · Ponte a prueba <em class="en">· Quiz</em></p>
+  <h2>Test: muestra aleatoria de 10 preguntas</h2>
+  <p class="intro">Cada intento toma 10 preguntas al azar del banco de 20 del test oficial. Recibirá retroalimentación inmediata en cada respuesta.</p>
+  <div class="quiz" id="quiz-box">
+    <div class="quiz-start" id="quiz-start">
+      <button class="btn" id="quiz-go">Comenzar el test</button>
+    </div>
+    <div class="quiz-run" id="quiz-run" hidden>
+      <div class="quiz-head"><span id="q-count">Pregunta 1 de 10</span><span id="q-score">Puntaje: 0</span></div>
+      <div class="quiz-progress"><div id="q-prog"></div></div>
+      <h3 id="q-text"></h3>
+      <div class="answers" id="q-answers"></div>
+      <p class="feedback" id="q-feedback" aria-live="polite"></p>
+      <button class="btn" id="q-next" hidden>Siguiente</button>
+    </div>
+    <div class="quiz-end" id="quiz-end" hidden>
+      <p class="big-score" id="q-final"></p>
+      <p id="q-msg"></p>
+      <button class="btn" id="q-retry">Intentar con otra muestra</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IA / CONCLUSIONES ============ -->
+<section id="cierre" class="block alt">
+  <p class="kicker">07 · Conclusiones <em class="en">· Key takeaways</em></p>
+  <h2>Cuatro ideas para llevarse</h2>
+  <div class="takeaways">
+    <div><span>01</span><p><b>Matriz + refuerzo + interfase</b> dan propiedades que ninguna fase tiene sola.</p></div>
+    <div><span>02</span><p><b>Rigidez específica:</b> el carbono-epoxi al 60 % es 3,4 veces más rígido por kilo que el acero.</p></div>
+    <div><span>03</span><p><b>Son anisótropos:</b> la orientación de la fibra se diseña, no se improvisa.</p></div>
+    <div><span>04</span><p><b>El proceso define</b> calidad, costo y volumen: una decisión de ingeniería industrial.</p></div>
+  </div>
+
+  <h3 class="sub">Uso ético de la inteligencia artificial</h3>
+  <div class="ai">
+    <div class="ai-tools">
+      <div><b>Claude (Anthropic)</b><span>Estructura de la investigación, guion y desarrollo de este sitio</span></div>
+      <div><b>[Herramienta 2]</b><span>[Uso: recopilación y análisis]</span></div>
+      <div><b>[Herramienta 3]</b><span>[Uso: diapositivas u otro]</span></div>
+    </div>
+    <div class="ai-principles">
+      <p><b>Verificar:</b> cada cifra se contrastó con Callister y Groover.</p>
+      <p><b>Declarar:</b> decimos qué herramienta usamos y para qué.</p>
+      <p><b>Responder:</b> el contenido final es responsabilidad de los autores.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div>
+    <p><strong>Materiales compuestos</strong> · Materiales de Ingeniería · Ingeniería Industrial · UFPS</p>
+    <p>Jean Morales (1193641) · Jhostyn Blanco (1981490) · Cúcuta, 2026</p>
+  </div>
+  <div class="refs">
+    <p><b>Referencias</b></p>
+    <p>Askeland, D. R. y Wright, W. J. (2017). <i>Ciencia e ingeniería de materiales</i>. Cengage.</p>
+    <p>Callister, W. D. y Rethwisch, D. G. (2018). <i>Materials Science and Engineering: An Introduction</i>. Wiley.</p>
+    <p>Chawla, K. K. (2012). <i>Composite Materials: Science and Engineering</i>. Springer.</p>
+    <p>Groover, M. P. (2020). <i>Fundamentals of Modern Manufacturing</i>. Wiley.</p>
+    <p>Mallick, P. K. (2007). <i>Fiber-Reinforced Composites</i>. CRC Press.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
